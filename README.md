@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-A helm chart for additional resources for your Jenkins server if you are using the [Jenkins chart](https://github.com/jenkinsci/helm-charts) with [Jenkins X](https://jenkins-x.io/v3/about/) and want to reuse the pipeline git token and maven/nexus settings.
+A helm chart for additional resources for your Jenkins server if you are using the [Jenkins chart](https://github.com/jenkinsci/helm-charts) with [Jenkins X](https://jenkins-x.io/v3/about/) and want to reuse the pipeline git token and maven/nexus settings from Vault or your cloud secret store.
  
 ## Usage
 
