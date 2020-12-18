@@ -5,6 +5,14 @@ metadata:
   name: jenkins-pipeline-activity
 rules:
 - apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
   - jenkins.io
   resources:
   - pipelineactivities
