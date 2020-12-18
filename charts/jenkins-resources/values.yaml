@@ -6,6 +6,11 @@ jxRequirements:
     gitName: ""
     gitServer: ""
 
+# enable being able to create PipelineActivity resources to replicate running pipelines to CRDs
+role:
+  pipelineActivity:
+    enabled: true
+
 # empty values typically populated by external secrets
 secrets:
   mavenSettings: ""
