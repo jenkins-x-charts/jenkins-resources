@@ -1,0 +1,17 @@
+domain: ""
+
+jxRequirements:
+  cluster:
+    gitKind: ""
+    gitName: ""
+    gitServer: ""
+
+# empty values typically populated by external secrets
+secrets:
+  mavenSettings: ""
+  mavenSecuritySettings: ""
+
+  gitUsername: ""
+  gitPassword: ""
+
+  dockerConfigJSON: "{}"
