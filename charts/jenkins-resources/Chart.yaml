@@ -3,7 +3,5 @@ description: A Helm chart for Jenkins Resources
 name: jenkins-resources
 version: 1.0.0
 appVersion: 1.0.0
-icon: ttps://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
 home: https://github.com/jenkins-x-charts/jenkins-resources
-
-
