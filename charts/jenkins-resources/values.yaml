@@ -11,6 +11,13 @@ role:
   pipelineActivity:
     enabled: true
 
+serviceAccounts:
+  tektonBot:
+    enabled: false
+    name: tekton-bot
+    rbac:
+      cluster: true
+
 # empty values typically populated by external secrets
 secrets:
   mavenSettings: ""

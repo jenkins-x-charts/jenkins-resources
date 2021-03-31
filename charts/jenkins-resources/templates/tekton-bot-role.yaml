@@ -1,0 +1,13 @@
+{{- if .Values.serviceAccounts.tektonBot.enabled }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ .Values.serviceAccounts.tektonBot.name | default "tekton-bot" | quote }}
+rules:
+- apiGroups:
+  - "*"
+  resources:
+  - "*"
+  verbs:
+  - "*"
+{{- end -}}
