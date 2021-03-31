@@ -1,0 +1,21 @@
+{{- if and (.Values.serviceAccounts.jenkins.rbac.cluster) (or (.Values.serviceAccounts.jenkins.name) (.Values.serviceAccounts.agent.name)) }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name:  jenkins-tekton-pipelines
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: jenkins-tekton-pipelines
+subjects:
+{{- if .Values.serviceAccounts.jenkins.name }}
+- kind: ServiceAccount
+  name: "{{ .Values.serviceAccounts.jenkins.name }}"
+  namespace: {{ .Release.Namespace }}
+{{- end -}}
+{{- if .Values.serviceAccounts.agent.name }}
+- kind: ServiceAccount
+  name: "{{ .Values.serviceAccounts.agent.name }}"
+  namespace: {{ .Release.Namespace }}
+{{- end -}}
+{{- end -}}

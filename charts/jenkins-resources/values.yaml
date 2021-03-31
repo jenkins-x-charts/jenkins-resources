@@ -12,6 +12,16 @@ role:
     enabled: true
 
 serviceAccounts:
+  # enable tekton RBAC for creating pipelines
+  jenkins:
+    name: jenkins
+    rbac:
+      cluster: true
+
+  # enable tekton RBAC for creating pipelines
+  agent:
+    name: ""
+
   tektonBot:
     enabled: false
     name: tekton-bot

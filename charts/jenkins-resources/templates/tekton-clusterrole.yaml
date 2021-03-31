@@ -1,0 +1,26 @@
+{{- if and (.Values.serviceAccounts.jenkins.rbac.cluster) (or (.Values.serviceAccounts.jenkins.name) (.Values.serviceAccounts.agent.name)) }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: jenkins-tekton-pipelines
+rules:
+  - apiGroups:
+    - tekton.dev
+    resources:
+    - "*"
+    verbs:
+    - list
+    - get
+    - watch
+    - create
+    - update
+  - apiGroups:
+      - ""
+    resources:
+    - pods
+    - pods/log
+    verbs:
+    - list
+    - get
+    - watch
+{{- end -}}
